@@ -1,0 +1,6 @@
+#!/bin/bash
+
+cmd="docker-compose run --rm web php $@"
+
+echo $cmd
+$cmd

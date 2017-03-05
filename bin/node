@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cmd="docker-compose run --rm nodejs node $@"
+
+echo $cmd
+$cmd
+
+
