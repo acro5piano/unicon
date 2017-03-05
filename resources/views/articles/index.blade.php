@@ -1,4 +1,10 @@
 <html>
+    <head>
+        <script>
+window.Laravel = {};
+window.Laravel.csrfToken = "{{ csrfToken() }}";
+        </script>
+    </head>
     <body>
         <example></example>
         @foreach ($articles as $article)
