@@ -14,10 +14,10 @@ services:
   db:
     image: "mysql:5.7"
     environment:
-      MYSQL_ROOT_PASSWORD: infra
-      MYSQL_DATABASE: infra
-      MYSQL_USER: infra
-      MYSQL_PASSWORD: infra
+      MYSQL_ROOT_PASSWORD: hoge
+      MYSQL_DATABASE: hoge
+      MYSQL_USER: hoge
+      MYSQL_PASSWORD: hoge
       MYSQL_HOST: ""
     ports:
       - "3306:3306"
