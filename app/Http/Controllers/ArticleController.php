@@ -10,8 +10,7 @@ class ArticleController extends Controller
 
     public function index_web()
     {
-        $articles = Article::all();
+        $articles = Article::take(5);
         return view('articles.index', ['articles' => $articles]);
-        // return view('welcome');
     }
 }

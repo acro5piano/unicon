@@ -19,6 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => 'api'], function() {
     Route::get('articles', function() {
-        return App\Models\Article::all();
+    return App\Models\Article::all()->take(10);
     });
 });
