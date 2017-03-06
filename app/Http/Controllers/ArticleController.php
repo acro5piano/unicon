@@ -12,4 +12,10 @@ class ArticleController extends Controller
         $articles = Article::all()->take(5);
         return $articles;
     }
+
+    public function show($id)
+    {
+        $article = Article::find($id);
+        return $article;
+    }
 }

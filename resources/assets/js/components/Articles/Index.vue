@@ -1,14 +1,12 @@
 <template>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2" v-for="article in articles">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        {{ article.title }}
-                    </div>
-                    <div class="panel-body">
-                        {{ article.content }}
-                    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2" v-for="article in articles">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <router-link to="/articles/1">{{ article.title }}</router-link>
+                </div>
+                <div class="panel-body">
+                    {{ article.content }}
                 </div>
             </div>
         </div>

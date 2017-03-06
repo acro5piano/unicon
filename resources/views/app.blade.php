@@ -19,7 +19,7 @@
         <div id="app">
             <navbar></navbar>
             <div class="container">
-                <articles></articles>
+                <router-view></router-view>
             </div>
             <navbar-footer></navbar-footer>
         </div>

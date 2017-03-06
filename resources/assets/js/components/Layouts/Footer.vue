@@ -1,7 +1,9 @@
 <template>
     <div>
         <hr>
-        <p>footer</p>
+        <div class="container">
+            <p>Unicon</p>
+        </div>
     </div>
 </template>
 

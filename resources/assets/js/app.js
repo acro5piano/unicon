@@ -17,18 +17,19 @@ require('./bootstrap')
 
 Vue.use(VueRouter)
 
-Vue.component('articles', require('./components/Articles.vue'))
-Vue.component('navbar', require('./components/layouts/Navbar.vue'))
-Vue.component('navbar-footer', require('./components/layouts/Footer.vue'))
+Vue.component('navbar', require('./components/Layouts/Navbar.vue'))
+Vue.component('navbar-footer', require('./components/Layouts/Footer.vue'))
 
 const router = new VueRouter({
     mode: 'history',
     routes: [
-        { path: '/', component: require('./components/Articles.vue') }
+        { path: '/', component: require('./components/Articles/Index.vue') },
+        { path: '/articles/:id', component: require('./components/Articles/Show.vue') },
+        { path: '/about', component: require('./components/About.vue') },
     ]
 })
 
 const app = new Vue({
-    el: '#app',
-});
+    router
+}).$mount('#app')
 
