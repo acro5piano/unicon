@@ -7,10 +7,9 @@ use App\Models\Article;
 
 class ArticleController extends Controller
 {
-
-    public function index_web()
+    public function index()
     {
-        $articles = Article::take(5);
-        return view('articles.index', ['articles' => $articles]);
+        $articles = Article::all()->take(5);
+        return $articles;
     }
 }

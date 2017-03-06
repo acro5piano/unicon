@@ -12,7 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 
-Route::get('/articles', 'ArticleController@index_web');

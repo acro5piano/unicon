@@ -16,7 +16,13 @@
         </script>
     </head>
     <body>
-        @yield('content')
+        <div id="app">
+            <navbar></navbar>
+            <div class="container">
+                <articles></articles>
+            </div>
+            <navbar-footer></navbar-footer>
+        </div>
     </body>
     <script src="{{ mix('js/app.js') }}"></script>
 </html>

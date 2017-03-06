@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import App from './App.vue'
 
 /**
  * First we will load all of this project's JavaScript dependencies which
