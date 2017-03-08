@@ -9,4 +9,4 @@ RUN curl -sS https://getcomposer.org/installer | php \
 RUN composer global require hirak/prestissimo:^0.3
 
 WORKDIR /app
-CMD php -S 0.0.0.0:8080 -t public
+CMD php -S 0.0.0.0:6060 -t public
