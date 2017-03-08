@@ -3,7 +3,7 @@
         <div class="col-md-8 col-md-offset-2" v-for="article in articles">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <router-link to="/articles/1">{{ article.title }}</router-link>
+                    <router-link :to="'/articles/' + article.id">{{ article.title }}</router-link>
                 </div>
                 <div class="panel-body">
                     {{ article.content }}
@@ -31,6 +31,9 @@
                 }).then(res =>  {
                     this.articles =  res.data
                 })
+            },
+            toArticle(id) {
+                this.$router.push({path: 'articles', query: {id: id}})
             }
         }
     }
