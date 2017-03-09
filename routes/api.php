@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 Route::group(['middleware' => 'api'], function() {
     Route::get('articles',  'ArticleController@index');
     Route::get('articles/{id}',  'ArticleController@show');
+    Route::get('whoami', function() {
+        return Auth::user();
+    });
+    Route::post('login',  'Auth\LoginController@login');
 });

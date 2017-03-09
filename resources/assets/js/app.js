@@ -26,6 +26,7 @@ const router = new VueRouter({
         { path: '/', component: require('./components/Articles/Index.vue') },
         { path: '/articles/:id', component: require('./components/Articles/Show.vue') },
         { path: '/about', component: require('./components/About.vue') },
+        { path: '/login', component: require('./components/Auth/Login.vue') },
     ]
 })
 

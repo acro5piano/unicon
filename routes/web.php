@@ -11,11 +11,15 @@
 |
 */
 
+
 // Route::get('/{any}', function () {
 //     return view('app');
 // })->where('any', '.*');
 
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+
+Route::get('whoami', function() {
+    return Auth::user();
+});
